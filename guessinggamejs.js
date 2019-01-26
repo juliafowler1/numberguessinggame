@@ -13,12 +13,12 @@ while (guess !== randomNum) {
     
     if (guess < randomNum)
     {
-        prompt("Nope, guess higher!"); 
+        guess = prompt("Nope, guess higher!"); 
     }
-    if (guess > randomNum) {
-        prompt("Wrong, guess lower.")
+    else if (guess > randomNum) {
+        guess = prompt("Wrong, guess lower.")
     }
-    if (guess === randomNum) {
+    else if (guess == randomNum) {
         console.log("Nailed it!")
         break;
     }
