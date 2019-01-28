@@ -9,8 +9,11 @@ console.log(randomNum);
 let guess = prompt("Guess a number between 1-10")
 
 
-while (guess !== randomNum) {
-    
+do {
+//if guess is not equal to randomNum, this will keep running
+//do while runs code before checking condition
+//once guess is equal to randomNum and condition is false
+//you break out of loop and console.log    
     if (guess < randomNum)
     {
         guess = prompt("Nope, guess higher!"); 
@@ -18,11 +21,9 @@ while (guess !== randomNum) {
     else if (guess > randomNum) {
         guess = prompt("Wrong, guess lower.")
     }
-    else if (guess == randomNum) {
-        console.log("Nailed it!")
-        break;
-    }
-}
+
+} while (guess != randomNum)
+console.log("Nailed it!");
 
 
 
